@@ -8,7 +8,9 @@ const animals = [
     { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
 ];
 
-const mammals = [];
+// Soluzione senza filter
+
+/* const mammals = [];
 
 animals.forEach(animal => {
 
@@ -19,5 +21,11 @@ animals.forEach(animal => {
     }
 
 });
+
+console.log(mammals); */
+
+// Soluzione con filter
+
+const mammals = animals.filter(animal => animal.classe === "mammiferi");
 
 console.log(mammals);
