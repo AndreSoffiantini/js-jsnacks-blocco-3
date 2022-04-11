@@ -60,7 +60,9 @@ const cars = [{
 
 console.log(cars);
 
-const auto_benzina = [];
+// Soluzione senza filter
+
+/* const auto_benzina = [];
 const auto_diesel = [];
 const auto_others = [];
 
@@ -81,6 +83,16 @@ cars.forEach((car) => {
     }
 
 });
+
+console.log(auto_benzina);
+console.log(auto_diesel);
+console.log(auto_others); */
+
+// Soluzione con filter
+
+const auto_benzina = cars.filter(car => car.alimentazione === "benzina");
+const auto_diesel = cars.filter(car => car.alimentazione === "diesel");
+const auto_others = cars.filter(car => car.alimentazione !== "benzina" && car.alimentazione !== "diesel");
 
 console.log(auto_benzina);
 console.log(auto_diesel);
